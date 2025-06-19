@@ -95,7 +95,7 @@ Design and program an embedded system to manage plant watering. The system must 
    - May send periodic status reports.
    - Have a small delay to save energy and match operational cycle.
 
-## Implementation Requirements:
+## 5. Implementation Requirements:
 
 - Implement the complete SPWS system functionality using C language.
 - Organize source code clearly and readably, with separate header and source files for modules (e.g., `main.c`, `sensors.c`, `watering_logic.c`, `actuators.c`, `buttons.c`, `config.h`).
@@ -103,3 +103,51 @@ Design and program an embedded system to manage plant watering. The system must 
 - Manage static and extern variables reasonably to control scope and share data between modules.
 - Simulate sensor, water pump, LED, and push button operations by printing console messages and corresponding state changes.
 - Ensure the system can smoothly transition between modes and handle situations like moisture too low, too high, or user intervention.
+
+---
+<br>
+
+# *My Solution*:
+## SPWS Overview – Design Breakdown
+
+**1. Objective:**
+
+- To build an embedded-style smart watering controller using C, simulating sensor readings, system state transitions, and actuator control using modular and maintainable code.
+
+**2. Core Modules**
+
+* **Sensor Handling** (`sensors.c/.h`)
+    * Read soil moisture and temperature.
+    * Simulated with random values or preset test data.
+* **Configuration** (`config.h`)
+    * System settings like moisture thresholds, watering duration, and sensor cycle.
+    * Stores current mode (auto/manual) and pump state.
+* **System Logic / State Machine** (`watering_logic.c/.h`)
+    * Implements auto mode logic and watering control based on sensor readings.
+    * Manages watering session timing and decision making.
+* **Actuators** (`actuators.c/.h`)
+    * Control water pump and status LEDs.
+    * Simulate by printing actions like "Pump ON", "LED set to RED", etc.
+* **Button Handling** (`buttons.c/.h`)
+    * Manage press events for mode toggle and manual watering.
+    * Simulate via function calls or user input.
+* **Main Application** (`main.c`)
+    * Initializes the system.
+    * Runs the infinite loop: checking buttons, updating logic, printing status, and delaying.
+
+**3. Key State Management Elements**
+
+* **Enums:**
+    * `system_mode_t`: `MODE_AUTO`, `MODE_MANUAL`
+    * `pump_state_t`: `PUMP_OFF`, `PUMP_ON`
+    * `led_status_t`: `LED_NORMAL`, `LED_WATERING`, etc.
+* **Data Structures:**
+    * `sensor_data_t`: moisture + temperature
+    * `system_config_t`: mode, thresholds, timers
+* **Timers:** Use counters or timestamps to simulate elapsed time.
+* **Notifications:** Console printouts triggered on key state changes or status intervals.
+
+**4. Simulated Environment**
+
+* No real hardware; I/O is simulated through `printf()`.
+* Timers mimic delays using loop counters or `sleep()`.
