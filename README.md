@@ -6,6 +6,7 @@ This module focuses on strengthening core knowledge in advanced C/C++ programmin
 
 ### [01__Clean_Code](01__Clean_Code/BT1/)
 Practices Clean Code principles and C coding conventions through a Library Management System project.
+- **[BT1_Library_Management_System](01__Clean_Code/BT1/)**: Implements a Library Management System that adheres to Clean Code principles, focusing on readability, maintainability, and modularity. The project includes features for managing books, users, and borrowing operations while following best practices in C programming.
 
 ### [02__Design_Pattern](02__Design_Pattern/)
 Applies fundamental software design patterns to embedded C projects.
@@ -21,3 +22,8 @@ Applies fundamental software design patterns to embedded C projects.
 #### Behavioral
 - **[BT1_Observer](02__Design_Pattern/Behavioral/BT1_Observer/)**: Implements an event notification system using the Observer Pattern for smart home sensors and devices.
 - **[BT2_State_Machine](02__Design_Pattern/Behavioral/BT2_State_Machine/)**: Models a music player using the State Pattern to manage transitions between playing, paused, and stopped states.
+
+### [03_Variable_N_Data_Types](03_Variable_N_Data_Types/)
+Explores advanced usage of variables, enums, structs, and state management in embedded C.
+
+- **[BT1_SPWS](03_Variable_N_Data_Types/BT1_SPWS/)**: Implements a smart plant watering system that uses sensor data, structured state handling, and simulated hardware control to manage automated and manual watering modes.
