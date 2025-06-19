@@ -4,13 +4,13 @@
 typedef struct {
     int id;
     float data;
-} SensorNode;
+} sensor_node_t;
 
 typedef struct {
     void (*collect_data)(void);
     void (*upload_data)(void);
-} SensorManager;
+} sensor_manager_t;
 
-SensorManager* get_sensor_manager_instance(void);
+sensor_manager_t* get_sensor_manager_instance(void);
 
 #endif // SENSOR_MANAGER_H

@@ -5,11 +5,11 @@
 static void collect_data_implementation(void);
 static void upload_data_implementation(void);
 
-static SensorManager* sensor_manager_instance = NULL;
+static sensor_manager_t* sensor_manager_instance = NULL;
 
-SensorManager* get_sensor_manager_instance(void) {
+sensor_manager_t* get_sensor_manager_instance(void) {
     if (sensor_manager_instance == NULL) {
-        sensor_manager_instance = (SensorManager*)malloc(sizeof(SensorManager));
+        sensor_manager_instance = (sensor_manager_t*)malloc(sizeof(sensor_manager_t));
         if (sensor_manager_instance != NULL) {
             sensor_manager_instance->collect_data = collect_data_implementation;
             sensor_manager_instance->upload_data = upload_data_implementation;
