@@ -27,3 +27,7 @@ Applies fundamental software design patterns to embedded C projects.
 Explores advanced usage of variables, enums, structs, and state management in embedded C.
 
 - **[BT1_SPWS](03_Variable_N_Data_Types/BT1_SPWS/)**: Implements a smart plant watering system that uses sensor data, structured state handling, and simulated hardware control to manage automated and manual watering modes.
+
+### [04_Standard_I_O](04_Standard_I_O/)
+Focuses on advanced input/output operations, including file handling and logging.
+- **[BT1_Logger](04_Standard_I_O/BT1_Logger/)**: Develops a professional logger module that supports multi-target logging, level filtering, and automatic metadata addition for debugging and monitoring applications.
