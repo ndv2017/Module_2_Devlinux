@@ -31,3 +31,7 @@ Explores advanced usage of variables, enums, structs, and state management in em
 ### [04_Standard_I_O](04_Standard_I_O/)
 Focuses on advanced input/output operations, including file handling and logging.
 - **[BT1_Logger](04_Standard_I_O/BT1_Logger/)**: Develops a professional logger module that supports multi-target logging, level filtering, and automatic metadata addition for debugging and monitoring applications.
+
+### [05_Operators_N_Control_Structure](05_Operators_N_Control_Structure/)
+Explores advanced operators and control structures in C, including bit manipulation.
+- **[BT1_RGB_Stream](05_Operators_N_Control_Structure/BT1_RGB_Stream/)**: Implements a driver for controlling RGB LED strips (like WS2812B) using bit manipulation, simulating a real-world LED control scenario.
