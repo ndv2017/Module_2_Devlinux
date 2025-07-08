@@ -9,8 +9,8 @@ void sensors_init(void) {
 sensor_data_t sensors_read(void) {
     // Simulate sensor data reading
     sensor_data_t sensor_data = {
-        .moisture = rand() % 101,
-        .temperature = 15.0f + (rand() % 2000) / 100.0f
+        .moisture = rand() % 101,   // Range 0-100%
+        .temperature = 15.0f + (rand() % 2000) / 100.0f     // Range 15.0°C to 35.0°C
     };
 
     printf("[Sensors] Moisture=%u%%, Temp=%.1f°C\n", sensor_data.moisture, sensor_data.temperature);

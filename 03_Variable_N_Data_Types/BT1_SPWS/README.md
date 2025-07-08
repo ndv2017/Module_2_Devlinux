@@ -119,18 +119,23 @@ Design and program an embedded system to manage plant watering. The system must 
 * **Sensor Handling** (`sensors.c/.h`)
     * Read soil moisture and temperature.
     * Simulated with random values or preset test data.
+
 * **Configuration** (`config.h`)
     * System settings like moisture thresholds, watering duration, and sensor cycle.
     * Stores current mode (auto/manual) and pump state.
+
 * **System Logic / State Machine** (`watering_logic.c/.h`)
     * Implements auto mode logic and watering control based on sensor readings.
     * Manages watering session timing and decision making.
+
 * **Actuators** (`actuators.c/.h`)
     * Control water pump and status LEDs.
     * Simulate by printing actions like "Pump ON", "LED set to RED", etc.
+
 * **Button Handling** (`buttons.c/.h`)
     * Manage press events for mode toggle and manual watering.
     * Simulate via function calls or user input.
+
 * **Main Application** (`main.c`)
     * Initializes the system.
     * Runs the infinite loop: checking buttons, updating logic, printing status, and delaying.
@@ -140,10 +145,12 @@ Design and program an embedded system to manage plant watering. The system must 
 * **Enums:**
     * `system_mode_t`: `MODE_AUTO`, `MODE_MANUAL`
     * `pump_state_t`: `PUMP_OFF`, `PUMP_ON`
-    * `led_status_t`: `LED_NORMAL`, `LED_WATERING`, etc.
+    * `led_status_t`: `LED_NORMAL`, `LED_WATERING`, `LED_LOW_MOISTURE_ALERT`, `LED_ERROR`
+
 * **Data Structures:**
     * `sensor_data_t`: moisture + temperature
     * `system_config_t`: mode, thresholds, timers
+
 * **Timers:** Use counters or timestamps to simulate elapsed time.
 * **Notifications:** Console printouts triggered on key state changes or status intervals.
 

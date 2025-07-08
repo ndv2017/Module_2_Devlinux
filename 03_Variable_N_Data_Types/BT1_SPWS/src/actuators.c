@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "actuators.h"
 
+static led_status_t current_led = LED_NORMAL;
+
 void actuators_init(void) {
     printf("[Actuators] Initialized (pump, LED)\n");
 }
-
-static led_status_t current_led = LED_NORMAL;
 
 void turn_pump_on(void) {
     printf("[Pump] ON\n");

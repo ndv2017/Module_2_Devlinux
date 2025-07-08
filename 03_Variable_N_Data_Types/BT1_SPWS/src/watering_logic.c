@@ -79,7 +79,7 @@ void watering_logic_cycle(sensor_data_t d) {
     }
     update_led(sys_config.led_status);
 
-    char stat[64];
+    char stat[STAT_BUFFER_SIZE];
     snprintf(stat, sizeof(stat), "Moisture=%u%%, Mode=%s, Pump=%s",
              d.moisture,
              sys_config.mode == MODE_AUTO ? "AUTO" : "MANUAL",
