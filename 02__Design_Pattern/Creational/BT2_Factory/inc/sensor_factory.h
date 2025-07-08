@@ -1,3 +1,6 @@
+#ifndef SENSOR_FACTORY_H
+#define SENSOR_FACTORY_H
+
 #include <stdlib.h>
 #include "sensor.h"
 #include "temperature_sensor.h"
@@ -11,3 +14,5 @@ typedef enum {
 } sensor_type_t;
 
 sensor_t* create_sensor(sensor_type_t type);
+
+#endif
