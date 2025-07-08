@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include "sensor.h"
+#include "humidity_sensor.h"
 
 static void humidity_sensor_init(void) {
     printf("Humidity sensor initialized.\n");

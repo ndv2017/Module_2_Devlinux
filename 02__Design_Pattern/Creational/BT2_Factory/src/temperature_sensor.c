@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include "sensor.h"
+#include "temperature_sensor.h"
 
 static void temperature_sensor_init(void) {
     printf("Temperature sensor initialized.\n");

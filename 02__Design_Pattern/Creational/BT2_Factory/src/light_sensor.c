@@ -1,6 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include "sensor.h"
+#include "light_sensor.h"
 
 static void light_sensor_init(void) {
     printf("Light sensor initialized.\n");

@@ -1,9 +1,5 @@
 #include <stdlib.h>
-#include "sensor.h"
-
-sensor_t* create_temperature_sensor(void);
-sensor_t* create_humidity_sensor(void);
-sensor_t* create_light_sensor(void);
+#include "sensor_factory.h"
 
 sensor_t* create_sensor(sensor_type_t type) {
     switch (type) {

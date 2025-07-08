@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sensor.h"
+#include "sensor_factory.h"
 
 int main(void) {
     sensor_t* temp_sensor = create_sensor(SENSOR_TEMPERATURE);
