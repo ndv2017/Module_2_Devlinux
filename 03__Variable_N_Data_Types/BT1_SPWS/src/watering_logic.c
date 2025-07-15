@@ -25,19 +25,21 @@ static uint32_t get_time_ms(void) {
     return (uint32_t)clock() * 1000 / CLOCKS_PER_SEC;
 }
 
-void watering_logic_cycle(sensor_data_t d) {
+void watering_logic_cycle(sensor_data_t data_from_sensor) {
     uint32_t now = get_time_ms();
 
     if (button1_pressed()) {
+        char buf[STAT_BUFFER_SIZE];
+
         sys_config.mode = (sys_config.mode == MODE_AUTO ? MODE_MANUAL : MODE_AUTO);
         if (sys_config.mode == MODE_MANUAL && sys_config.pump == PUMP_ON) {
             sys_config.pump = PUMP_OFF;
             turn_pump_off();
         }
-        char buf[64];
+
         snprintf(buf, sizeof(buf), "Mode toggled to %s",
                  sys_config.mode == MODE_AUTO ? "AUTO" : "MANUAL");
-        notify_status(buf);
+        notify_status((const char*)buf);
     }
 
     if (sys_config.mode == MODE_MANUAL && button2_pressed()) {
@@ -52,7 +54,7 @@ void watering_logic_cycle(sensor_data_t d) {
 
     if (sys_config.mode == MODE_AUTO && now - last_sensor_time_ms >= sys_config.sensor_cycle_ms) {
         last_sensor_time_ms = now;
-        if (sys_config.pump == PUMP_OFF && d.moisture < sys_config.moisture_min) {
+        if (sys_config.pump == PUMP_OFF && data_from_sensor.moisture < sys_config.moisture_min) {
             turn_pump_on();
             sys_config.pump = PUMP_ON;
             notify_status("Auto watering started");
@@ -62,7 +64,7 @@ void watering_logic_cycle(sensor_data_t d) {
 
     if (sys_config.pump == PUMP_ON) {
         watering_elapsed_ms += 100; // next delay
-        if ((sys_config.mode == MODE_AUTO && (d.moisture >= sys_config.moisture_max || watering_elapsed_ms >= sys_config.max_watering_ms)) ||
+        if ((sys_config.mode == MODE_AUTO && (data_from_sensor.moisture >= sys_config.moisture_max || watering_elapsed_ms >= sys_config.max_watering_ms)) ||
             (sys_config.mode == MODE_MANUAL && watering_elapsed_ms >= sys_config.max_watering_ms)) {
             turn_pump_off();
             sys_config.pump = PUMP_OFF;
@@ -72,7 +74,7 @@ void watering_logic_cycle(sensor_data_t d) {
 
     if (sys_config.pump == PUMP_ON) {
         sys_config.led_status = LED_WATERING;
-    } else if (d.moisture < sys_config.moisture_min) {
+    } else if (data_from_sensor.moisture < sys_config.moisture_min) {
         sys_config.led_status = LED_LOW_MOISTURE_ALERT;
     } else {
         sys_config.led_status = LED_NORMAL;
@@ -81,7 +83,7 @@ void watering_logic_cycle(sensor_data_t d) {
 
     char stat[STAT_BUFFER_SIZE];
     snprintf(stat, sizeof(stat), "Moisture=%u%%, Mode=%s, Pump=%s",
-             d.moisture,
+             data_from_sensor.moisture,
              sys_config.mode == MODE_AUTO ? "AUTO" : "MANUAL",
              sys_config.pump == PUMP_ON ? "ON" : "OFF");
     notify_status(stat);
