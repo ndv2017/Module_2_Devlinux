@@ -30,7 +30,7 @@ float cpu_stats::get_usage_percent() const {
 }
 
 void cpu_stats::parse_proc_stat(uint64_t& idle_time, uint64_t& total_time) {
-    std::ifstream stat_file("/proc/stat");
+    std::ifstream stat_file(PROC_STAT_PATH);
     std::string line;
 
     if (std::getline(stat_file, line)) {

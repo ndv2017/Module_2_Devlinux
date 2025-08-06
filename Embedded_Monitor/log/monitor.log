@@ -39,3 +39,144 @@
 [2025-08-06 16:51:06] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
 [2025-08-06 16:51:07] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
 [2025-08-06 16:51:08] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 17:55:19] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 17:55:27] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 17:55:27] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:02:07] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:02:23] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:02:24] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:04:25] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:04:30] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:04:30] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:05:16] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:05:22] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:05:22] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:05:31] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:06:22] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:06:22] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:07:48] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:07:49] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:07:50] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:09:11] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:09:21] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:09:22] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:44:52] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:44:52] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 85434.445312 KB/s, TX: 85434.445312 KB/s
+[2025-08-06 21:44:52] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 53309.914062 KB/s, TX: 76948.445312 KB/s
+[2025-08-06 21:44:53] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 11.295898 KB/s, TX: 11.295898 KB/s
+[2025-08-06 21:44:53] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 6.804688 KB/s, TX: 8.472656 KB/s
+[2025-08-06 21:44:54] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.779297 KB/s, TX: 1.779297 KB/s
+[2025-08-06 21:44:54] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 6.639648 KB/s, TX: 5.705078 KB/s
+[2025-08-06 21:44:55] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.717773 KB/s, TX: 1.717773 KB/s
+[2025-08-06 21:44:55] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.902344 KB/s, TX: 1.085938 KB/s
+[2025-08-06 21:44:56] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 8.482422 KB/s, TX: 8.482422 KB/s
+[2025-08-06 21:44:56] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 3.353516 KB/s, TX: 6.035156 KB/s
+[2025-08-06 21:44:57] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.592773 KB/s, TX: 1.592773 KB/s
+[2025-08-06 21:44:57] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.822266 KB/s, TX: 1.099609 KB/s
+[2025-08-06 21:44:58] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:44:58] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:46:22] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:46:22] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 85559.296875 KB/s, TX: 85559.296875 KB/s
+[2025-08-06 21:46:22] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 53403.656250 KB/s, TX: 77061.031250 KB/s
+[2025-08-06 21:46:23] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 10.872070 KB/s, TX: 10.872070 KB/s
+[2025-08-06 21:46:23] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 6.118164 KB/s, TX: 8.305664 KB/s
+[2025-08-06 21:46:24] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.791992 KB/s, TX: 1.791992 KB/s
+[2025-08-06 21:46:24] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 6.662109 KB/s, TX: 5.576172 KB/s
+[2025-08-06 21:46:25] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.863281 KB/s, TX: 1.863281 KB/s
+[2025-08-06 21:46:25] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.886719 KB/s, TX: 1.242188 KB/s
+[2025-08-06 21:46:26] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 8.552734 KB/s, TX: 8.552734 KB/s
+[2025-08-06 21:46:26] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 3.460938 KB/s, TX: 6.035156 KB/s
+[2025-08-06 21:46:27] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.423828 KB/s, TX: 1.423828 KB/s
+[2025-08-06 21:46:27] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.736328 KB/s, TX: 0.949219 KB/s
+[2025-08-06 21:46:28] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.275391 KB/s, TX: 1.275391 KB/s
+[2025-08-06 21:46:28] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.630859 KB/s, TX: 0.814453 KB/s
+[2025-08-06 21:46:29] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.530273 KB/s, TX: 1.530273 KB/s
+[2025-08-06 21:46:29] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.974609 KB/s, TX: 0.873047 KB/s
+[2025-08-06 21:46:30] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.251953 KB/s, TX: 1.251953 KB/s
+[2025-08-06 21:46:30] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.681641 KB/s, TX: 0.806641 KB/s
+[2025-08-06 21:46:31] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 8.030273 KB/s, TX: 8.030273 KB/s
+[2025-08-06 21:46:31] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 2.910156 KB/s, TX: 5.984375 KB/s
+[2025-08-06 21:46:32] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.458984 KB/s, TX: 1.458984 KB/s
+[2025-08-06 21:46:32] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.763672 KB/s, TX: 0.964844 KB/s
+[2025-08-06 21:46:33] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.529297 KB/s, TX: 1.529297 KB/s
+[2025-08-06 21:46:33] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.816406 KB/s, TX: 1.082031 KB/s
+[2025-08-06 21:46:34] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.498047 KB/s, TX: 1.498047 KB/s
+[2025-08-06 21:46:34] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.951172 KB/s, TX: 0.865234 KB/s
+[2025-08-06 21:46:35] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.197266 KB/s, TX: 1.197266 KB/s
+[2025-08-06 21:46:35] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.666016 KB/s, TX: 0.806641 KB/s
+[2025-08-06 21:46:36] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 7.910156 KB/s, TX: 7.910156 KB/s
+[2025-08-06 21:46:36] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 2.894531 KB/s, TX: 5.929688 KB/s
+[2025-08-06 21:46:37] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.389648 KB/s, TX: 1.389648 KB/s
+[2025-08-06 21:46:37] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.732422 KB/s, TX: 0.933594 KB/s
+[2025-08-06 21:46:38] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.239258 KB/s, TX: 1.239258 KB/s
+[2025-08-06 21:46:38] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.615234 KB/s, TX: 0.710938 KB/s
+[2025-08-06 21:46:39] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.438477 KB/s, TX: 1.438477 KB/s
+[2025-08-06 21:46:39] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.796875 KB/s, TX: 0.857422 KB/s
+[2025-08-06 21:46:40] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.056641 KB/s, TX: 1.056641 KB/s
+[2025-08-06 21:46:40] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 1.182617 KB/s, TX: 1.147461 KB/s
+[2025-08-06 21:46:41] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 7.786133 KB/s, TX: 7.786133 KB/s
+[2025-08-06 21:46:41] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 2.775391 KB/s, TX: 5.833984 KB/s
+[2025-08-06 21:46:42] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.446289 KB/s, TX: 1.446289 KB/s
+[2025-08-06 21:46:42] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.705078 KB/s, TX: 0.876953 KB/s
+[2025-08-06 21:46:43] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.477539 KB/s, TX: 1.477539 KB/s
+[2025-08-06 21:46:43] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.765625 KB/s, TX: 0.957031 KB/s
+[2025-08-06 21:46:45] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.475586 KB/s, TX: 1.475586 KB/s
+[2025-08-06 21:46:45] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 1.023438 KB/s, TX: 0.908203 KB/s
+[2025-08-06 21:46:46] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.239258 KB/s, TX: 1.239258 KB/s
+[2025-08-06 21:46:46] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.615234 KB/s, TX: 0.710938 KB/s
+[2025-08-06 21:46:47] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 7.967773 KB/s, TX: 7.967773 KB/s
+[2025-08-06 21:46:47] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 3.001953 KB/s, TX: 6.046875 KB/s
+[2025-08-06 21:46:48] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.449219 KB/s, TX: 1.449219 KB/s
+[2025-08-06 21:46:48] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.705078 KB/s, TX: 0.957031 KB/s
+[2025-08-06 21:46:49] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.214844 KB/s, TX: 1.214844 KB/s
+[2025-08-06 21:46:49] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.607422 KB/s, TX: 0.783203 KB/s
+[2025-08-06 21:46:50] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.434570 KB/s, TX: 1.434570 KB/s
+[2025-08-06 21:46:50] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.855469 KB/s, TX: 0.857422 KB/s
+[2025-08-06 21:46:51] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.038086 KB/s, TX: 1.038086 KB/s
+[2025-08-06 21:46:51] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.480469 KB/s, TX: 0.714844 KB/s
+[2025-08-06 21:46:52] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 7.885742 KB/s, TX: 7.885742 KB/s
+[2025-08-06 21:46:52] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 2.841797 KB/s, TX: 5.816406 KB/s
+[2025-08-06 21:46:53] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.420898 KB/s, TX: 1.420898 KB/s
+[2025-08-06 21:46:53] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.740234 KB/s, TX: 0.949219 KB/s
+[2025-08-06 21:46:53] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:46:54] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:52:21] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:52:21] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 85795.960938 KB/s, TX: 85795.960938 KB/s
+[2025-08-06 21:52:21] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 53651.437500 KB/s, TX: 77310.000000 KB/s
+[2025-08-06 21:52:22] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 10.297852 KB/s, TX: 10.297852 KB/s
+[2025-08-06 21:52:22] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 11.194336 KB/s, TX: 10.896484 KB/s
+[2025-08-06 21:52:23] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.163086 KB/s, TX: 1.163086 KB/s
+[2025-08-06 21:52:23] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 1.060547 KB/s, TX: 1.221680 KB/s
+[2025-08-06 21:52:24] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 1.018555 KB/s, TX: 1.018555 KB/s
+[2025-08-06 21:52:24] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 5.766602 KB/s, TX: 4.799805 KB/s
+[2025-08-06 21:52:25] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 0.624023 KB/s, TX: 0.624023 KB/s
+[2025-08-06 21:52:25] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 1.266602 KB/s, TX: 0.873047 KB/s
+[2025-08-06 21:52:26] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 0.479492 KB/s, TX: 0.479492 KB/s
+[2025-08-06 21:52:26] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.259766 KB/s, TX: 0.613281 KB/s
+[2025-08-06 21:52:27] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 0.578125 KB/s, TX: 0.578125 KB/s
+[2025-08-06 21:52:27] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.326172 KB/s, TX: 0.689453 KB/s
+[2025-08-06 21:52:28] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 0.581055 KB/s, TX: 0.581055 KB/s
+[2025-08-06 21:52:28] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.326172 KB/s, TX: 0.712891 KB/s
+[2025-08-06 21:52:29] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 0.427734 KB/s, TX: 0.427734 KB/s
+[2025-08-06 21:52:29] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.267578 KB/s, TX: 0.554688 KB/s
+[2025-08-06 21:52:30] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 0.621094 KB/s, TX: 0.621094 KB/s
+[2025-08-06 21:52:30] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.449219 KB/s, TX: 0.675781 KB/s
+[2025-08-06 21:52:31] [INFO] [src/util/logger_adapter.cpp:8] - Net [lo] - RX: 0.474609 KB/s, TX: 0.474609 KB/s
+[2025-08-06 21:52:31] [INFO] [src/util/logger_adapter.cpp:8] - Net [ens33] - RX: 0.259766 KB/s, TX: 0.628906 KB/s
+[2025-08-06 21:52:31] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:52:32] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:55:53] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:55:57] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:55:57] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:56:37] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:57:26] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:57:27] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 21:58:13] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 21:59:53] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 21:59:54] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 22:00:22] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 22:09:23] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 22:09:23] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-07 00:16:54] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-07 00:17:34] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-07 00:17:35] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.

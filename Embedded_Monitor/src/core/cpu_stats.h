@@ -4,6 +4,8 @@
 #include <vector>
 #include <cstdint>
 
+#define PROC_STAT_PATH "/proc/stat"
+
 class cpu_stats {
 public:
     cpu_stats();
