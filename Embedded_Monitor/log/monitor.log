@@ -1,0 +1,41 @@
+[2025-08-06 16:30:13] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 16:30:13] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 2.843279 %
+[2025-08-06 16:30:14] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 1.254708 %
+[2025-08-06 16:30:15] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 16:30:29] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 16:30:29] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 2.841461 %
+[2025-08-06 16:30:30] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 0.627351 %
+[2025-08-06 16:30:31] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 0.501251 %
+[2025-08-06 16:30:32] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 3.894472 %
+[2025-08-06 16:30:33] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 0.751877 %
+[2025-08-06 16:30:34] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 16:35:56] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 16:35:56] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 2.800435 %
+[2025-08-06 16:35:57] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 1.251566 %
+[2025-08-06 16:35:58] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 3.266335 %
+[2025-08-06 16:35:59] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 0.625783 %
+[2025-08-06 16:36:00] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 1.254708 %
+[2025-08-06 16:36:01] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 1.003766 %
+[2025-08-06 16:36:02] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 2.133000 %
+[2025-08-06 16:36:03] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 16:36:44] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 16:36:44] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 2.795678 %
+[2025-08-06 16:36:45] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 2.896726 %
+[2025-08-06 16:36:46] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 0.625783 %
+[2025-08-06 16:36:47] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 1.253134 %
+[2025-08-06 16:36:48] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 0.752825 %
+[2025-08-06 16:36:49] [INFO] [src/util/logger_adapter.cpp:8] - CPU Usage: 3.647798 %
+[2025-08-06 16:36:49] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 16:36:50] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 16:44:55] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 16:44:57] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 16:44:58] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 16:45:16] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 16:45:21] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 16:45:22] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 16:45:41] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 16:45:43] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 16:45:44] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
+[2025-08-06 16:51:06] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
+[2025-08-06 16:51:07] [INFO] [src/util/logger_adapter.cpp:8] - Caught signal 2, exiting...
+[2025-08-06 16:51:08] [INFO] [src/util/logger_adapter.cpp:8] - System monitor stopped.
