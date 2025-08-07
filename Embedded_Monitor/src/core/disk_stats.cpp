@@ -14,9 +14,8 @@ void disk_stats::update() {
 void disk_stats::update_mount_point(const std::string& path) {
     struct statvfs stat;
     if (statvfs(path.c_str(), &stat) != 0) {
-        // Handle error, e.g., log it
         logger_adapter::log(LOG_ERROR, "Failed to get disk stats for " + path);
-        return;  // Failed to read (ignore this mount)
+        return;  // Failed to read (ignore)
     }
 
     float usage;

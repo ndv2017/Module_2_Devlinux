@@ -21,9 +21,10 @@ CXX         := g++
 CXXFLAGS    := -std=c++17 -Wall -Wextra -I$(CORE_DIR) -I$(ALERT_DIR) -I$(UTIL_DIR) -I$(LEGACY_DIR)
 
 # Sources and objects
-CPP_SRCS := $(wildcard $(CORE_DIR)/*.cpp) $(wildcard $(UTIL_DIR)/*.cpp)
+CPP_SRCS := $(wildcard $(CORE_DIR)/*.cpp) $(wildcard $(UTIL_DIR)/*.cpp) $(wildcard $(ALERT_DIR)/*.cpp)
 CPP_OBJS := $(patsubst $(CORE_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(filter $(CORE_DIR)/%.cpp,$(CPP_SRCS))) \
-            $(patsubst $(UTIL_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(filter $(UTIL_DIR)/%.cpp,$(CPP_SRCS)))
+            $(patsubst $(UTIL_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(filter $(UTIL_DIR)/%.cpp,$(CPP_SRCS))) \
+			$(patsubst $(ALERT_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(filter $(ALERT_DIR)/%.cpp,$(CPP_SRCS)))
 
 C_OBJS := $(OBJ_DIR)/logger.o
 
@@ -47,6 +48,9 @@ $(OBJ_DIR)/%.o: $(CORE_DIR)/%.cpp
 $(OBJ_DIR)/%.o: $(UTIL_DIR)/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+$(OBJ_DIR)/%.o: $(ALERT_DIR)/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 $(OBJ_DIR)/logger.o: $(LEGACY_DIR)/logger.c
 	$(CC) -c $< -o $@
 
@@ -58,7 +62,7 @@ clean:
 	rm -rf $(OBJ_DIR)/*.o $(BIN_DIR)/*
 
 clean_log:
-	rm -rf $(LOG_DIR)/*
+	rm -rf $(LOG_DIR)
 
 clean_all_dirs:
 	rm -rf $(OBJ_DIR) $(BIN_DIR)

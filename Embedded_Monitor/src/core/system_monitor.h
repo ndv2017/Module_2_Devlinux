@@ -5,6 +5,7 @@
 #include "mem_stats.h"
 #include "disk_stats.h"
 #include "net_stats.h"
+#include "sys_info.h"
 
 class system_monitor {
 public:
@@ -16,12 +17,14 @@ public:
     const mem_stats& get_mem_stats() const;
     const disk_stats& get_disk_stats() const;
     const net_stats& get_net_stats() const;
+    const sys_info& get_sys_info() const;
 
 private:
     cpu_stats cpu;
     mem_stats mem;
     disk_stats disk;
     net_stats net;
+    sys_info sys;
 };
 
 #endif  // SYSTEM_MONITOR_H

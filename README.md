@@ -35,3 +35,8 @@ Focuses on advanced input/output operations, including file handling and logging
 ### [05__Operators_N_Control_Structure](05__Operators_N_Control_Structure/)
 Explores advanced operators and control structures in C, including bit manipulation.
 - **[BT1_RGB_Stream](05__Operators_N_Control_Structure/BT1_RGB_Stream/)**: Implements a driver for controlling RGB LED strips (like WS2812B) using bit manipulation, simulating a real-world LED control scenario.
+
+---
+
+### [Embedded_Monitor](Embedded_Monitor/)
+An "Embedded System Configuration Monitoring System" designed for the Raspberry Pi Zero platform, integrating an IL19341 display and providing real-time monitoring of system parameters.
