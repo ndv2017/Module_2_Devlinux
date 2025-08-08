@@ -1,13 +1,8 @@
-# Project: Embedded System Monitor
 .PHONY: all clean run
 
 CUR_DIR     := .
 SRC_DIR     := $(CUR_DIR)/src
-CORE_DIR    := $(SRC_DIR)/core
-ALERT_DIR   := $(SRC_DIR)/alert
-UTIL_DIR    := $(SRC_DIR)/util
-LEGACY_DIR  := $(SRC_DIR)/c_legacy
-
+CONFIG_DIR  := $(CUR_DIR)/config
 OBJ_DIR     := $(CUR_DIR)/obj
 BIN_DIR     := $(CUR_DIR)/bin
 LOG_DIR     := $(CUR_DIR)/log
@@ -16,53 +11,45 @@ $(shell mkdir -p $(OBJ_DIR))
 $(shell mkdir -p $(BIN_DIR))
 $(shell mkdir -p $(LOG_DIR))
 
-# Compiler & flags
 CXX         := g++
-CXXFLAGS    := -std=c++17 -Wall -Wextra -I$(CORE_DIR) -I$(ALERT_DIR) -I$(UTIL_DIR) -I$(LEGACY_DIR)
+CC          := gcc
+CXXFLAGS    := -std=c++17 -Wall -Wextra
 
-# Sources and objects
-CPP_SRCS := $(wildcard $(CORE_DIR)/*.cpp) $(wildcard $(UTIL_DIR)/*.cpp) $(wildcard $(ALERT_DIR)/*.cpp)
-CPP_OBJS := $(patsubst $(CORE_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(filter $(CORE_DIR)/%.cpp,$(CPP_SRCS))) \
-            $(patsubst $(UTIL_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(filter $(UTIL_DIR)/%.cpp,$(CPP_SRCS))) \
-			$(patsubst $(ALERT_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(filter $(ALERT_DIR)/%.cpp,$(CPP_SRCS)))
-
-C_OBJS := $(OBJ_DIR)/logger.o
-
+CPP_SRCS := $(shell find $(SRC_DIR) -name "*.cpp")
+C_SRCS   := $(shell find $(SRC_DIR) -name "*.c")
 MAIN_SRC := $(SRC_DIR)/main.cpp
+
+INCLUDES := $(sort $(dir $(CPP_SRCS) $(C_SRCS)))
+INCLUDES := $(patsubst %, -I%, $(INCLUDES))         # Prefix each with -I, e.g: -Isrc/core/cpu_stats/
+CXXFLAGS += $(INCLUDES)
+
+CPP_OBJS := $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(filter-out $(MAIN_SRC), $(CPP_SRCS)))
+C_OBJS   := $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(C_SRCS))
 MAIN_OBJ := $(OBJ_DIR)/main.o
 
-# Executable
-TARGET := $(BIN_DIR)/monitor_app
+TARGET   := $(BIN_DIR)/monitor_app
 
-all: clean $(TARGET)
+all: $(TARGET)
 
 $(TARGET): $(MAIN_OBJ) $(CPP_OBJS) $(C_OBJS)
-	$(CXX) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
-$(MAIN_OBJ): $(MAIN_SRC)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(OBJ_DIR)/%.o: $(CORE_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(OBJ_DIR)/%.o: $(UTIL_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(OBJ_DIR)/%.o: $(ALERT_DIR)/%.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(OBJ_DIR)/logger.o: $(LEGACY_DIR)/logger.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
 	$(CC) -c $< -o $@
 
 run: all
-	@echo "Running monitor_app..."
+	@echo "Running monitor app..."
 	@$(TARGET)
 
 clean:
-	rm -rf $(OBJ_DIR)/*.o $(BIN_DIR)/*
+	rm -rf $(OBJ_DIR) $(BIN_DIR)
 
 clean_log:
 	rm -rf $(LOG_DIR)
 
-clean_all_dirs:
-	rm -rf $(OBJ_DIR) $(BIN_DIR)
+clean_all: clean clean_log

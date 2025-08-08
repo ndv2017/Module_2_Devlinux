@@ -2,10 +2,11 @@
 #include <thread>
 #include <chrono>
 #include <csignal>
+#include <iomanip>
 
-#include "core/system_monitor.h"
-#include "util/logger_adapter.h"
-#include "alert/alert_manager.h"
+#include "core/system_monitor/system_monitor.h"
+#include "util/logger_adapter/logger_adapter.h"
+#include "alert/alert_manager/alert_manager.h"
 
 #define LOG_FILE_PATH   "log/monitor.log"
 #define CONFIG_PATH     "config/thresholds.conf"
@@ -17,10 +18,28 @@ void signal_handler(int signal) {
     logger_adapter::log(LOG_INFO, "Caught signal " + std::to_string(signal) + ", exiting...");
 }
 
+std::string format_bytes(uint64_t kb) {
+    std::stringstream ss;
+
+    if (kb >= 1024 * 1024) {
+        float gb = static_cast<float>(kb) / 1024.0f / 1024.0f;
+        ss << std::fixed << std::setprecision(2) << gb << "GB";
+    }
+    else if (kb >= 1024) {
+        float mb = static_cast<float>(kb) / 1024.0f;
+        ss << std::fixed << std::setprecision(2) << mb << "MB";
+    }
+    else
+        ss << kb << "KB";
+
+    return ss.str();
+}
+
 int main() {
     std::signal(SIGINT, signal_handler);
 
     logger_adapter::init(LOG_INFO, LOG_FILE_PATH);
+    logger_adapter::set_level(LOG_ERROR);
     logger_adapter::log(LOG_INFO, "System monitor started.");
 
     system_monitor monitor;
@@ -38,7 +57,7 @@ int main() {
         const auto& sys_info = monitor.get_sys_info();
         alerts.check(monitor);
 
-        std::cout << "===========================================================" << std::endl;
+        std::cout << "============================= System Stats =============================" << std::endl;
 
         // CPU stats
         std::cout << "CPU Usage: " << cpu_usage << " %" << std::endl;
@@ -51,11 +70,10 @@ int main() {
 
         // Disk stats
         for (const auto& disk_usage : disk_usages) {
-            std::string log_msg = "Disk " + disk_usage.mount_point + "\t-> Used: " + std::to_string(disk_usage.used_kb) +
-                                " KB / " + std::to_string(disk_usage.total_kb) + " KB (" +
-                                std::to_string(disk_usage.usage_percent) + " %)";
-
-            std::cout << log_msg << std::endl;
+            std::cout << "Disk [" << disk_usage.mount_point << "]\t-> "
+                    << "Used: " << format_bytes(disk_usage.used_kb) << ", "
+                    << "Total: " << format_bytes(disk_usage.total_kb) << ", "
+                    << "Usage: " << std::setprecision(2) << std::fixed << disk_usage.usage_percent << " %" << std::endl;
         }
         std::cout << std::endl;
 

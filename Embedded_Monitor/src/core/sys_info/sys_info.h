@@ -2,7 +2,7 @@
 #define SYS_INFO_H
 
 #include <string>
-#include <logger_adapter.h>
+#include "util/logger_adapter/logger_adapter.h"
 
 #define PROC_UPTIME_PATH "/proc/uptime"
 #define PROC_LOADAVG_PATH "/proc/loadavg"

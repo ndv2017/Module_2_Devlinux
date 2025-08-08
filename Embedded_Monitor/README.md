@@ -9,53 +9,47 @@ This project is an "Embedded System Configuration Monitoring System" designed fo
 Here's the output of the program. The output may vary based on the system configuration and the current state of the system being monitored.
 
 ```log
-Running monitor_app...
-[2025-08-07 17:38:09] [INFO] [src/util/logger_adapter.cpp:8] - System monitor started.
-[2025-08-07 17:38:09] [INFO] [src/util/logger_adapter.cpp:8] - Thresholds loaded from: config/thresholds.conf
-[2025-08-07 17:38:09] [WARNING] [src/util/logger_adapter.cpp:8] - Disk / usage (89.930252%) exceeded threshold (80.000000%)
-[2025-08-07 17:38:09] [WARNING] [src/util/logger_adapter.cpp:8] - Net RX [lo] (112022.015625 KB/s) exceeded threshold (2048.000000 KB/s)
-[2025-08-07 17:38:09] [WARNING] [src/util/logger_adapter.cpp:8] - Net TX [lo] (112022.015625 KB/s) exceeded threshold (2048.000000 KB/s)
-[2025-08-07 17:38:09] [WARNING] [src/util/logger_adapter.cpp:8] - Net RX [ens33] (168898.859375 KB/s) exceeded threshold (2048.000000 KB/s)
-[2025-08-07 17:38:09] [WARNING] [src/util/logger_adapter.cpp:8] - Net TX [ens33] (146797.734375 KB/s) exceeded threshold (2048.000000 KB/s)
-===========================================================
-CPU Usage: 1.15066 %
+Running monitor app...
+============================= System Stats =============================
+CPU Usage: 1.48257 %
 
-RAM Usage: 36.0377 %
-Swap Usage: 0 %
+RAM Usage: 36.8514 %
+Swap Usage: 0.0371934 %
 
-Disk /  -> Used: 120024212 KB / 133463668 KB (89.930252 %)
+Disk [/]        -> Used: 115.14GB, Total: 127.28GB, Usage: 90.46 %
+Disk [/boot/efi]        -> Used: 6.09MB, Total: 511.96MB, Usage: 1.19 %
 
-Net [lo]        -> RX: 112022.015625 KB/s, TX: 112022.015625 KB/s
-Net [ens33]     -> RX: 168898.859375 KB/s, TX: 146797.734375 KB/s
+Net [lo]        -> RX: 68461.835938 KB/s, TX: 68461.835938 KB/s
+Net [ens33]     -> RX: 55413.992188 KB/s, TX: 59020.109375 KB/s
 
-Uptime: 21808.4 seconds
-Load Average    -> 1min: 0.09, 5min: 0.11, 15min: 0.1
+Uptime: 13465.36 seconds
+Load Average    -> 1min: 1.07, 5min: 0.46, 15min: 0.22
 Kernel Version: 6.8.0-65-generic
-Local Time: 2025-08-07 17:38:09
+Local Time: 2025-08-08 17:51:51
 
-[2025-08-07 17:38:10] [WARNING] [src/util/logger_adapter.cpp:8] - CPU usage (25.314861%) exceeded threshold (25.000000%)
-===========================================================
-CPU Usage: 25.3149 %
+============================= System Stats =============================
+CPU Usage: 20.51 %
 
-RAM Usage: 37.8828 %
-Swap Usage: 0 %
+RAM Usage: 36.71 %
+Swap Usage: 0.04 %
 
-Disk /  -> Used: 120024248 KB / 133463668 KB (89.930275 %)
+Disk [/]        -> Used: 115.14GB, Total: 127.28GB, Usage: 90.46 %
+Disk [/boot/efi]        -> Used: 6.09MB, Total: 511.96MB, Usage: 1.19 %
 
-Net [lo]        -> RX: 5.666992 KB/s, TX: 5.666992 KB/s
-Net [ens33]     -> RX: 28.895508 KB/s, TX: 12.671875 KB/s
+Net [lo]        -> RX: 9.277344 KB/s, TX: 9.277344 KB/s
+Net [ens33]     -> RX: 5.722656 KB/s, TX: 5.423828 KB/s
 
-Uptime: 21809.4 seconds
-Load Average    -> 1min: 0.09, 5min: 0.11, 15min: 0.1
+Uptime: 13466.36 seconds
+Load Average    -> 1min: 1.07, 5min: 0.46, 15min: 0.22
 Kernel Version: 6.8.0-65-generic
-Local Time: 2025-08-07 17:38:10
+Local Time: 2025-08-08 17:51:52
 ```
 
-* This output shows the CPU usage, RAM usage, swap usage, disk usage, network speeds for two interfaces (loopback and Ethernet), system uptime, load averages over 1, 5, and 15 minutes, kernel version, and local time.
+* This output shows the CPU usage, RAM usage, swap usage, disk usage for partitions, network statistics for interfaces, system uptime, load averages, kernel version, and local time.
 * The values will change dynamically based on the system's current state and workload.
 * The output is printed every second, showing real-time updates of the monitored parameters.
 
-> [!NOTE]
+> [!IMPORTANT]
 > At this point, the program is running on Ubuntu 22.04 Laptop, **not on Raspberry Pi Zero**.
 
 ## **2. Features**
@@ -97,20 +91,55 @@ To build and run this project, you will need the following knowledge:
 ### **4.2. File Structure**
 The project's code is organized as follows:
 
-```
-embedded_monitor/
-├── src/
-│   ├── main.cpp
-│   ├── core/                  # The Model component (data collection and logic)
-│   ├── alert/                 # Alert management based on thresholds
-│   ├── util/                  # Utility functions
-│   └── c_legacy/              # Wrapper for existing C code (logger module)
-├── config/
-│   └── thresholds.conf        # Configuration file for alert thresholds
-├── log/
-│   └── monitor.log            # Log file
-├── Makefile / CMakeLists.txt  # Build system
-└── README.md
+```bash
+.
+├── config
+│   └── thresholds.conf
+├── log
+│   └── monitor.log
+├── Makefile
+├── README.md
+└── src
+    ├── alert
+    │   ├── alert_manager
+    │   │   ├── alert_manager.cpp
+    │   │   └── alert_manager.h
+    │   └── thresholds
+    │       ├── thresholds.cpp
+    │       └── thresholds.h
+    ├── c_legacy
+    │   └── logger
+    │       ├── logger.c
+    │       └── logger.h
+    ├── core
+    │   ├── cpu_stats
+    │   │   ├── cpu_stats.cpp
+    │   │   └── cpu_stats.h
+    │   ├── disk_stats
+    │   │   ├── disk_stats.cpp
+    │   │   └── disk_stats.h
+    │   ├── mem_stats
+    │   │   ├── mem_stats.cpp
+    │   │   └── mem_stats.h
+    │   ├── net_stats
+    │   │   ├── net_stats.cpp
+    │   │   └── net_stats.h
+    │   ├── sys_info
+    │   │   ├── sys_info.cpp
+    │   │   └── sys_info.h
+    │   └── system_monitor
+    │       ├── system_monitor.cpp
+    │       └── system_monitor.h
+    ├── main.cpp
+    └── util
+        ├── config_reader
+        │   ├── config_reader.cpp
+        │   └── config_reader.h
+        └── logger_adapter
+            ├── logger_adapter.cpp
+            └── logger_adapter.h
+
+18 directories, 27 files
 ```
 
 ### **4.3. Building the Project**

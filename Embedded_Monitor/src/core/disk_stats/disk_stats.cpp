@@ -7,8 +7,8 @@ disk_stats::disk_stats() {}
 
 void disk_stats::update() {
     usages.clear();
-    update_mount_point(ROOT_MOUNT_POINT);  // For now, just monitor root filesystem
-    // /boot, /home, etc.
+    update_mount_point(ROOT_MOUNT_POINT);
+    update_mount_point(EFI_MOUNT_POINT);
 }
 
 void disk_stats::update_mount_point(const std::string& path) {

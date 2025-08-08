@@ -5,6 +5,7 @@
 #include <vector>
 
 #define ROOT_MOUNT_POINT "/"
+#define EFI_MOUNT_POINT "/boot/efi"
 struct disk_usage_info {
     std::string mount_point;
     uint64_t total_kb;

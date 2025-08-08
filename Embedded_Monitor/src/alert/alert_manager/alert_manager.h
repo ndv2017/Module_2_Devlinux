@@ -1,8 +1,8 @@
 #ifndef ALERT_MANAGER_H
 #define ALERT_MANAGER_H
 
-#include "system_monitor.h"
-#include "thresholds.h"
+#include "../system_monitor/system_monitor.h"
+#include "../thresholds/thresholds.h"
 #include <unordered_map>
 #include <string>
 

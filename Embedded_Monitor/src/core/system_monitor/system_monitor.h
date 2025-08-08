@@ -1,11 +1,11 @@
 #ifndef SYSTEM_MONITOR_H
 #define SYSTEM_MONITOR_H
 
-#include "cpu_stats.h"
-#include "mem_stats.h"
-#include "disk_stats.h"
-#include "net_stats.h"
-#include "sys_info.h"
+#include "../cpu_stats/cpu_stats.h"
+#include "../mem_stats/mem_stats.h"
+#include "../disk_stats/disk_stats.h"
+#include "../net_stats/net_stats.h"
+#include "../sys_info/sys_info.h"
 
 class system_monitor {
 public:
